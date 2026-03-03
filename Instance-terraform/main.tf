@@ -46,7 +46,7 @@ resource "aws_instance" "web" {
 }
 resource "aws_instance" "web2" {
   ami                    = "ami-019715e0d74f695be" #change your ami value according to your aws instance 
-  instance_type          = "t2.xlarge"
+  instance_type          = "t3.micro"
   key_name               = "kubernetes"
   vpc_security_group_ids = [aws_security_group.Jenkins-sg.id]
   tags = {
